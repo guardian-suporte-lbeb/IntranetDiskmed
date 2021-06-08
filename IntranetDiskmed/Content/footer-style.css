@@ -1,0 +1,68 @@
+﻿
+.rodape {
+    position: fixed !important;
+    background-color: #e2e2e2;
+    height: 38px;
+    bottom: 0;
+    width: 100%;
+    border-top: 3px solid var(--corEfeito);
+}
+
+.corpo {
+    padding-bottom: 50px !important;
+}
+
+.navegacao {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navegacao-sm {
+    width: 20% !important;
+}
+
+.informacoes {
+    float: left;
+    width: 80%;
+    padding-top: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    display: flex;
+}
+
+    .informacoes > label {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.informacoes-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.info-identificador {
+    font-weight: bold !important;
+    color: var(--corIntranet) !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.icone-rodape {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+    .icone-rodape > svg {
+        color: var(--corEfeito);
+        height: 25px !important;
+        width: 25px !important;
+    }
+
+        .icone-rodape > svg:hover {
+            color: black;
+        }

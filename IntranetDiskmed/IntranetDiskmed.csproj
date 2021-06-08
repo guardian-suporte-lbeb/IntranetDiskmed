@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.13.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.13.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -98,6 +101,7 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -105,15 +109,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\footer-style.css" />
+    <Content Include="Content\GridView-Style.css" />
+    <Content Include="Content\header-style.css" />
+    <Content Include="Content\Interface-Style.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="font-awesome\css\all.css" />
+    <Content Include="font-awesome\css\all.min.css" />
+    <Content Include="font-awesome\css\brands.css" />
+    <Content Include="font-awesome\css\brands.min.css" />
+    <Content Include="font-awesome\css\fontawesome.css" />
+    <Content Include="font-awesome\css\fontawesome.min.css" />
+    <Content Include="font-awesome\css\regular.css" />
+    <Content Include="font-awesome\css\regular.min.css" />
+    <Content Include="font-awesome\css\solid.css" />
+    <Content Include="font-awesome\css\solid.min.css" />
+    <Content Include="font-awesome\css\svg-with-js.css" />
+    <Content Include="font-awesome\css\svg-with-js.min.css" />
+    <Content Include="font-awesome\css\v4-shims.css" />
+    <Content Include="font-awesome\css\v4-shims.min.css" />
+    <Content Include="font-awesome\js\all.js" />
+    <Content Include="font-awesome\js\all.min.js" />
+    <Content Include="font-awesome\js\brands.js" />
+    <Content Include="font-awesome\js\brands.min.js" />
+    <Content Include="font-awesome\js\conflict-detection.js" />
+    <Content Include="font-awesome\js\conflict-detection.min.js" />
+    <Content Include="font-awesome\js\fontawesome.js" />
+    <Content Include="font-awesome\js\fontawesome.min.js" />
+    <Content Include="font-awesome\js\regular.js" />
+    <Content Include="font-awesome\js\regular.min.js" />
+    <Content Include="font-awesome\js\solid.js" />
+    <Content Include="font-awesome\js\solid.min.js" />
+    <Content Include="font-awesome\js\v4-shims.js" />
+    <Content Include="font-awesome\js\v4-shims.min.js" />
+    <Content Include="font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="font-awesome\webfonts\fa-solid-900.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -124,7 +160,36 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="font-awesome\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images\arrow-down.png" />
+    <Content Include="Images\arrow-left.png" />
+    <Content Include="Images\arrow-right.png" />
+    <Content Include="Images\arrow-up.png" />
+    <Content Include="Images\icone.ico" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loadingBKP.gif" />
+    <Content Include="Images\logo-diskmed-lg.png" />
+    <Content Include="Images\logo-diskmed-sm.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo_guardian.png" />
+    <Content Include="Images\logo_lbeb.png" />
+    <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="MenuUsuarios\Log.aspx" />
+    <Content Include="MenuUsuarios\manutencao-acessos.aspx" />
+    <Content Include="MenuUsuarios\usuarios.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -161,31 +226,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="ConexoesGuardian\ConexaoPortal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Conexao.cs" />
+    <Compile Include="Intranet\Configuracoes.cs" />
+    <Compile Include="Intranet\Criptografia.cs" />
+    <Compile Include="Intranet\Email.cs" />
+    <Compile Include="Intranet\Formatacao.cs" />
+    <Compile Include="Intranet\Interface.cs" />
+    <Compile Include="Intranet\IntranetXLS.cs" />
+    <Compile Include="Intranet\Log.cs" />
+    <Compile Include="Intranet\TabelasERP.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUsuarios\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuUsuarios\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUsuarios\manutencao-acessos.aspx.cs">
+      <DependentUpon>manutencao-acessos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuUsuarios\manutencao-acessos.aspx.designer.cs">
+      <DependentUpon>manutencao-acessos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUsuarios\usuarios.aspx.cs">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuUsuarios\usuarios.aspx.designer.cs">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -201,6 +291,7 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Util\Texto_Util.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +307,8 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="SettingsDebug.config" />
+    <Content Include="SettingsDiskmed.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,7 +1,9 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
 }
 
 /* Wrapping element */
@@ -10,14 +12,6 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -29,3 +23,540 @@ textarea {
         padding: 0;
     }
 }
+
+.body-dados {
+    padding-top: 15px;
+    width: 95%;
+    margin: auto;
+}
+
+.body-menu {
+    top: 70px;
+    margin-left: 5%;
+    width: 85%;
+    color: white;
+    bottom: 80px;
+    position: absolute;
+    overflow: auto;
+}
+
+.body-filtros {
+    top: 500px;
+    margin-left: 5%;
+    width: 85%;
+    color: white;
+    bottom: 75px;
+    position: absolute;
+}
+
+.buttons-menu {
+    margin-left: 5%;
+    width: 85%;
+    color: white;
+    bottom: 45px;
+    position: absolute;
+    height: 30px;
+    text-align: right;
+}
+
+.content-dados {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.content-grid {
+    width: 95%;
+    overflow-x: auto;
+    overflow-y: auto;
+    bottom: 85px;
+    top: 120px;
+    position: absolute;
+}
+
+.form-group label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.table-header {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.table-item {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.table tbody > tr > td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#menuCliente:hover, #menuBobinas:hover, #menuTitulosAbertos:hover, #menuTitulosRecebidos:hover, #menuPedidos:hover, #menuNotasFiscais:hover {
+    color: white;
+}
+
+.form-control[readonly] {
+    background-color: white;
+    cursor: text;
+}
+
+.header-menu > span {
+    cursor: pointer;
+    color: var(--corIntranet);
+    font-size: 35px;
+}
+
+.col-sm-12 {
+    float: left;
+}
+
+.login-controls {
+    width: 95%;
+    bottom: 40px;
+    top: 75px;
+    position: absolute;
+    text-align: center;
+}
+
+.login-controls > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.login-controls > div > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.login-left {
+    text-align: right;
+    height: 250px;
+}
+
+.login-right {
+    text-align: left;
+    height: 250px;
+    width: 260px;
+    padding-top: 45px;
+}
+
+#txtSenha {
+    margin-top: 15px;
+}
+
+#btnRenovarSenha, #btnLogin {
+    margin-top: 5px;
+}
+
+.login-right > .form-group > .col-sm-4, .login-right > .form-group > .col-sm-8 {
+    padding: 0;
+}
+
+.login-right > .form-group > .col-sm-8 {
+    text-align: right;
+}
+
+.feature-wrap {
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+    .feature-wrap > a > svg {
+        font-size: 48px;
+        height: 120px !important;
+        width: 120px !important;
+        margin: 3px;
+        border-radius: 100%;
+        line-height: 105px;
+        text-align: center;
+        padding: 25px;
+        background: #ffffff;
+        color: var(--corIntranet);
+        border: 3px solid #ffffff;
+        box-shadow: inset 0 0 0 5px #f2f2f2;
+        -webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;
+        -o-transition: 500ms;
+        transition: 500ms;
+        float: left;
+        margin-right: 25px;
+    }
+
+    .feature-wrap svg:hover {
+        background: var(--corIntranet);
+        color: #fff;
+        box-shadow: inset 0 0 0 5px var(--corIntranet);
+        -webkit-box-shadow: inset 0 0 0 5px var(--corIntranet);
+        border: 3px solid var(--corIntranet);
+    }
+
+    .feature-wrap a {
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--corIntranet);
+    }
+
+.feature-search {
+    width: 25px;
+    margin: auto;
+}
+
+    .feature-search a span {
+        font-size: 20px;
+        height: 25px;
+        width: 25px;
+        margin: auto;
+        line-height: 25px;
+        text-align: center;
+        color: var(--corIntranet);
+    }
+
+h2 {
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.container {
+    margin-top: 15px;
+}
+
+#chkTitulos, #chkPedidos, #chkNotas {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.panel-group, .panel-default > .panel-heading {
+    color: var(--corIntranet);
+}
+
+.panel-group, .panel-default > .panel-body {
+    color: #333;
+}
+
+.panel-group {
+    width: 99%;
+}
+
+.loadingModal {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    opacity: 0.5;
+}
+
+.loadingMessage {
+    text-align: center;
+    padding-top: 20%;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+#itensModal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    bottom: 10%;
+    right: 5%;
+    left: 5%;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+#liberacaoModal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    bottom: 10%;
+    right: 25%;
+    left: 25%;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+#solicitacaoModal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    bottom: 10%;
+    right: 5%;
+    left: 5%;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+#ParametrosFaturadoProduzido {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 30%;
+    bottom: 30%;
+    right: 30%;
+    left: 30%;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+@media screen {
+    #itensModal, #liberacaoModal, #solicitacaoModal, #ParametrosFaturadoProduzido {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+}
+
+.itens-content {
+    position: absolute;
+    padding: 15px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 55px;
+    overflow: auto;
+}
+
+.liberacoes-content {
+    position: absolute;
+    padding: 15px;
+    left: 10px;
+    right: 10px;
+    bottom: 80px;
+    top: 55px;
+    overflow: auto;
+}
+
+.FaturadoProduzido-content {
+    position: absolute;
+    top:0px;
+    bottom: 80px;
+    overflow: auto;
+}
+.FaturadoProduzido-border-botom {
+    border-bottom:0px;
+}
+
+.liberacoes-footer {
+    position: absolute;
+    border-top: 1px solid #e5e5e5;
+    padding: 15px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.FaturadoProduzido-footer {
+    position: absolute;
+    border-top: 1px solid #e5e5e5;
+    padding: 15px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+#modalBackground {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#modalBackground2 {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.modal-title {
+    color: #438217;
+    font-weight: bold;
+}
+
+#btnTitulosAbertos, #btnTitulosRecebidos, #btnPedidos, #btnNotasFiscais, #btnMTodos {
+    margin-bottom: 15px;
+}
+
+.field-highlight {
+    border: 1px solid red;
+}
+
+.label-highlight {
+    color: red;
+}
+
+.field-editable {
+    border: 1px solid var(--corIntranet);
+}
+
+.label-editable {
+    color: var(--corIntranet);
+}
+
+.btnStatus_Style {
+    vertical-align: middle;
+    border: none;
+    border-radius: 10px;
+}
+
+.buttons {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+}
+
+.limitSize {
+    bottom: 100px;
+}
+
+.actionBtn {
+    text-decoration: none;
+    font-size: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.btn-action {
+    color: var(--corIntranet);
+}
+
+.actionBtn:link, .actionBtn:visited {
+    text-decoration: none;
+}
+
+.actionBtn:hover {
+    color: black;
+}
+
+.actionBtn:active {
+    text-decoration: none;
+}
+
+.pagTitle {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: var(--corIntranet);
+    transform: translate(-50%,-50%);
+    padding-bottom: 30px;
+}
+
+.positionR {
+    float: right;
+}
+
+.btnStatus_Style {
+    vertical-align: middle;
+    border: none;
+    border-radius: 10px;
+}
+
+#btnFecharLiberacoes {
+    float: right;
+}
+
+#m1, #m2 {
+    display: none;
+}
+
+#containerTA {
+    bottom: 200px;
+}
+
+#rodapeTA {
+    position: absolute;
+    width: 95%;
+    height: 100px;
+    bottom: 85px;
+    border: 2px solid var(--corIntranet);
+    border-radius: 10px;
+    padding-top: 8px;
+}
+
+#lblQtdVencidos, #lblQtdAVencer, #lblTotalVencidos, #lblTotalAVencer, #lblPeriodoVencidos, #lblPeriodoAVencer {
+    font-weight: normal;
+}
+
+a > .fa-5 {
+    font-size: 5em;
+}
+
+.grid-relatorio > div {
+    overflow-x: overlay;
+}
+
+.nav-tabs > li.active > a {
+    background-color: var(--corIntranet) !important;
+    color: white;
+}
+
+.nav > li > a:hover {
+    background-color: var(--corIntranet) !important;
+    color: white;
+    opacity: 0.6;
+}
+

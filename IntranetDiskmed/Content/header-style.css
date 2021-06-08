@@ -1,0 +1,71 @@
+﻿
+#cabecalho, #cabecalho > div {
+    height: 80px;
+    background-color: #e2e2e2;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.cabecalho-text {
+    color: black;
+    height: 100%;
+    font-size: 30px;
+    font-weight: bold !important;
+    padding-top: 18px;
+    text-align: center;
+}
+
+    .cabecalho-text > label {
+        margin: 0;
+    }
+
+.cabecalho-borda {
+    border-bottom: 3px solid var(--corEfeito);
+}
+
+.cabecalho-img {
+    max-width: 14%;
+}
+
+.corpo {
+    padding-top: 90px !important;
+}
+
+.item-cabecalho {
+    display: table !important;
+    text-align: center;
+}
+
+.cabecalho-fixo {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.negrito {
+    font-weight: bold !important;
+}
+
+.centralizar-cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.informacao-sessao {
+    text-align: center;
+    color: var(--corEfeito);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.informacao-acesso {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.logo-lbeb {
+    width: 100%;
+}

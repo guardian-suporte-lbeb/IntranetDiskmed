@@ -1,0 +1,322 @@
+﻿
+/*pagina*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
+
+/* ----------------------------------------------------------------------------- CONFIGURAÇÕES PADRÃO ----------------------------------------------------------------------------- */
+:root {
+    --corIntranet: #438217 !important;
+    --corBackground: #E1EAFB !important;
+    --corEfeito: #ff8200 !important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/*#region ----------------------------------------------------------------------------- UTILITÁRIOS ----------------------------------------------------------------------------- */
+
+.add-float-left {
+    float: left;
+}
+
+.add-float-right {
+    float: right;
+}
+
+.add-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.add-overlay-x {
+    overflow-x: auto !important;
+}
+
+.add-overlay-y {
+    overflow-y: auto !important;
+}
+
+.overlay-auto {
+    overflow: auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.remove-line-height {
+    line-height: 0;
+}
+
+.remove-padding {
+    padding: 0 !important;
+}
+
+.borda-prim {
+    border: 1px solid var(--corIntranet) !important;
+}
+
+.borda-secun {
+    border: 1px solid var(--corEfeito) !important;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- PADRÕES DE INTERFACE ----------------------------------------------------------------------------- */
+
+.barra-titulo {
+    font-size: 18px;
+    background-color: var(--corIntranet);
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.botao-md {
+    width: 120px !important;
+}
+
+.botao-lg {
+    width: 160px !important;
+}
+
+.padrao-grid {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.btn-padrao {
+    padding: 2px;
+    margin-right: 2px;
+}
+
+.estilo-gridview tbody > tr > td {
+    padding-top: 0;
+    padding-bottom: 1px;
+}
+
+.item-parametro {
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 2px solid var(--corEfeito);
+    display: block;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- COMPONENTES ----------------------------------------------------------------------------- */
+
+.titulo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.titulo-princ {
+    color: var(--corIntranet);
+}
+
+.titulo-secun {
+    color: var(--corEfeito);
+}
+
+.input-xs {
+    padding: 3px 8px;
+    height: 22px !important;
+    font-size: 12px !important;
+    margin-left: 1.5% !important;
+}
+
+.btn-expandir {
+    margin: 4px 6px 0 !important;
+    height: 15px;
+    width: 15px;
+    vertical-align: top !important;
+    text-align: center;
+    padding: 0px !important;
+    line-height: 1 !important;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- MENSAGEM DE LOADING ----------------------------------------------------------------------------- */
+
+.panel-loading {
+    z-index: 500;
+    position: fixed;
+    top: 35%;
+    left: 20%;
+    width: 60%;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.background-loading {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- BARRA DE ROLAGEM ----------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--corIntranet);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--corIntranet);
+}
+
+::-webkit-scrollbar-button {
+    height: 15px;
+    width: 15px;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+    ::-webkit-scrollbar-button:vertical:decrement {
+        background-image: url("../images/arrow-up.png");
+        background-position: top;
+    }
+
+    ::-webkit-scrollbar-button:vertical:increment {
+        background-image: url("../images/arrow-down.png");
+        background-position: bottom;
+    }
+
+    ::-webkit-scrollbar-button:horizontal:decrement {
+        background-image: url("../images/arrow-left.png");
+        background-position: left;
+    }
+
+    ::-webkit-scrollbar-button:horizontal:increment {
+        background-image: url("../images/arrow-right.png");
+        background-position: right;
+    }
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- MODAL ROMANEIO ----------------------------------------------------------------------------- */
+
+.modal-romaneio {
+    top: 2% !important;
+    bottom: 2% !important;
+    right: 5% !important;
+    left: 5% !important;
+}
+
+.modal-guardian-romaneio {
+    display: none;
+    position: fixed;
+    z-index: 499;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+.cabecalho-modal-romaneio {
+    float: left;
+    width: 100%;
+}
+
+.titulo-modal-romaneio {
+    color: var(--corCliente);
+    font-weight: bold;
+}
+
+.conteudo-modal-romaneio {
+    float: left;
+    width: 100%;
+    height: 86%;
+    overflow-y: overlay;
+    padding: 15px;
+}
+
+.rodape-modal-romaneio {
+    float: left;
+    width: 100%;
+    text-align: left !important;
+}
+
+.espaco-emails{
+    margin-bottom: 5px !important;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- MODAL ROMANEIO ----------------------------------------------------------------------------- */
+
+.modal-infocomp {
+    top: 2% !important;
+    bottom: 2% !important;
+    right: 5% !important;
+    left: 5% !important;
+}
+
+.modal-guardian-infocomp {
+    display: none;
+    position: fixed;
+    z-index: 499;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+.cabecalho-modal-infocomp {
+    float: left;
+    width: 100%;
+}
+
+.titulo-modal-infocomp {
+    color: var(--corCliente);
+    font-weight: bold;
+}
+
+.conteudo-modal-infocomp {
+    float: left;
+    width: 100%;
+    height: 86%;
+    overflow-y: overlay;
+    padding: 15px;
+}
+
+.rodape-modal-infocomp {
+    float: left;
+    width: 100%;
+    text-align: left !important;
+}
+
+.espaco-emails {
+    margin-bottom: 5px !important;
+}
+
+/*#endregion */

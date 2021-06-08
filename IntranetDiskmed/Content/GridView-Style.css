@@ -1,0 +1,184 @@
+﻿
+/*#region ----------------------------------------------------------------------------- LAYOUT GRID ----------------------------------------------------------------------------- */
+
+.gridview-layout {
+    margin-bottom: 0;
+}
+
+.cabecalho-grid {
+    font-size: 11px !important;
+    background-color: var(--corIntranet);
+    color: white !important;
+    border: 1px solid var(--corIntranet);
+}
+
+    .cabecalho-grid > th {
+        padding: 4px !important;
+    }
+
+.linha-grid {
+    font-size: 10.7px !important;
+}
+
+    .linha-grid > td {
+        padding: 4px !important;
+    }
+
+.linha-grid-alternada {
+    background-color: var(--corBackground);
+}
+
+.mar-grid {
+    margin-top: 15px !important;
+}
+
+.rodape-grid {
+    font-size: 11px !important;
+    background-color: var(--corIntranet);
+    color: white !important;
+    font-weight: bold;
+    border: 1px solid var(--corIntranet);
+}
+
+    .rodape-grid:hover {
+        background-color: var(--corIntranet) !important;
+        opacity: 0.8;
+    }
+
+    .rodape-grid > td {
+        padding: 4px !important;
+    }
+
+        .rodape-grid > td:hover {
+            background-color: var(--corIntranet) !important;
+            opacity: 0.8;
+        }
+
+.caixa-gridview > div {
+    overflow-x: overlay;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- ICONE GRID ----------------------------------------------------------------------------- */
+
+.grid-icone {
+    font-size: 1.6rem;
+}
+
+.grid-icone-default {
+    color: #1b5d19;
+}
+
+.grid-icone-light {
+    color: white;
+}
+
+.grid-icone-dark {
+    color: black;
+}
+
+.grid-icone-primary {
+    color: #337ab7;
+}
+
+.grid-icone-success {
+    color: #5cb85c;
+}
+
+.grid-icone-danger {
+    color: #d9534f;
+}
+
+.grid-icone-warning {
+    color: #f0ad4e;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- PAGINAÇÃO GRID ----------------------------------------------------------------------------- */
+
+.grid-pager a, .grid-pager span {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+    .grid-pager a:hover {
+        opacity: 0.8;
+    }
+    
+.grid-pager a {
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.grid-pager span {
+    background-color: var(--corBackground);
+    color: black;
+    border: 1px solid var(--corIntranet);
+}
+
+.teste{
+    height:370px;
+}
+    .teste > div {
+        height: 370px;
+    }
+
+
+
+.GridPager a, .GridPager span {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+    .GridPager a:hover {
+        opacity: 0.8;
+    }
+
+.GridPager a {
+    background-color: #f5f5f5;
+    /*color: #969696;*/
+    border: 1px solid #969696;
+}
+
+.GridPager span {
+    background-color: #A1DCF2;
+    color: #000;
+    border: 1px solid #3AC0F2;
+}
+    /*#endregion */

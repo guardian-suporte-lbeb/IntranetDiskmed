@@ -7,19 +7,19 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace IntranetDiskmed.MenuUsuarios {
+namespace IntranetDiskmed.MenuAnvisa {
     
     
-    public partial class Log {
+    public partial class DadosAnvisa {
         
         /// <summary>
-        /// Controle frmDadosCliente.
+        /// Controle formAnvisa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmDadosCliente;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formAnvisa;
         
         /// <summary>
         /// Controle ScriptManager1.
@@ -29,6 +29,15 @@ namespace IntranetDiskmed.MenuUsuarios {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// Controle UpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
         /// Controle TxtPaginaAtual.
@@ -49,49 +58,67 @@ namespace IntranetDiskmed.MenuUsuarios {
         protected global::System.Web.UI.WebControls.Label TxtUsuario;
         
         /// <summary>
-        /// Controle UpdatePanel1.
+        /// Controle UpdateProgress.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdateProgress UpdateProgress;
         
         /// <summary>
-        /// Controle btnMTodos.
+        /// Controle TxtTextoLike.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMTodos;
+        protected global::System.Web.UI.WebControls.TextBox TxtTextoLike;
         
         /// <summary>
-        /// Controle gdvUserLog.
+        /// Controle TxtValorDe.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gdvUserLog;
+        protected global::System.Web.UI.WebControls.TextBox TxtValorDe;
         
         /// <summary>
-        /// Controle UpdateProgress1.
+        /// Controle TxtValorAte.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
+        protected global::System.Web.UI.WebControls.TextBox TxtValorAte;
         
         /// <summary>
-        /// Controle btnVoltar.
+        /// Controle LbtnConsultarDadosAnvisa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVoltar;
+        protected global::System.Web.UI.WebControls.LinkButton LbtnConsultarDadosAnvisa;
+        
+        /// <summary>
+        /// Controle TituloGrid1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel TituloGrid1;
+        
+        /// <summary>
+        /// Controle GdvAnvisa.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GdvAnvisa;
         
         /// <summary>
         /// Controle btnSair.
@@ -101,5 +128,32 @@ namespace IntranetDiskmed.MenuUsuarios {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnSair;
+        
+        /// <summary>
+        /// Controle ModalMensagem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ModalMensagem;
+        
+        /// <summary>
+        /// Controle LblDescricaoModalMensagem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblDescricaoModalMensagem;
+        
+        /// <summary>
+        /// Controle BackgroundModal.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BackgroundModal;
     }
 }

@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.13.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.13.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
@@ -172,6 +175,7 @@
     <Content Include="font-awesome\webfonts\fa-solid-900.ttf" />
     <Content Include="font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="font-awesome\webfonts\fa-solid-900.woff2" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\arrow-down.png" />
     <Content Include="Images\arrow-left.png" />
@@ -187,6 +191,8 @@
     <Content Include="Images\logo_lbeb.png" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="MenuAnvisa\DadosAnvisa.aspx" />
+    <Content Include="MenuCustoProduto\AlteracaoCustoProduto.aspx" />
     <Content Include="MenuUsuarios\Log.aspx" />
     <Content Include="MenuUsuarios\manutencao-acessos.aspx" />
     <Content Include="MenuUsuarios\usuarios.aspx" />
@@ -228,6 +234,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ConexoesGuardian\ConexaoPortal.cs" />
+    <Compile Include="DAO\AlteracaoCProdutoDAO.cs" />
+    <Compile Include="DAO\AnvisaDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,6 +262,20 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MenuAnvisa\DadosAnvisa.aspx.cs">
+      <DependentUpon>DadosAnvisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuAnvisa\DadosAnvisa.aspx.designer.cs">
+      <DependentUpon>DadosAnvisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCustoProduto\AlteracaoCustoProduto.aspx.cs">
+      <DependentUpon>AlteracaoCustoProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuCustoProduto\AlteracaoCustoProduto.aspx.designer.cs">
+      <DependentUpon>AlteracaoCustoProduto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MenuUsuarios\Log.aspx.cs">
       <DependentUpon>Log.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,6 +297,8 @@
     <Compile Include="MenuUsuarios\usuarios.aspx.designer.cs">
       <DependentUpon>usuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlteracaoCProduto.cs" />
+    <Compile Include="Models\Anvisa.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -308,7 +332,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="SettingsDebug.config" />
-    <Content Include="SettingsDiskmed.config" />
+    <Content Include="SettingsDiskmed.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

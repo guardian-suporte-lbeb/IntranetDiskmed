@@ -78,7 +78,7 @@
 
                             <div id="menuCusto" runat="server" class="col-md-5 col-sm-5">
                                 <div class="feature-wrap">
-                                    <a href="MenuFaturamento/menu-faturamento.aspx">
+                                    <a href="MenuCustoProduto/AlteracaoCustoProduto.aspx">
                                         <i class="fas fa-money-check-alt"></i>
                                         <h2>Custos</h2>
                                     </a>
@@ -91,7 +91,7 @@
 
                             <div id="menuAnvisa" runat="server" class="col-md-5 col-sm-5">
                                 <div class="feature-wrap">
-                                    <a href="MenuRH/menu-rh.aspx">
+                                    <a href="MenuAnvisa/DadosAnvisa.aspx">
                                         <i class="fas fa-file-signature"></i>
                                         <h2>Anvisa</h2>
                                     </a>

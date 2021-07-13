@@ -49,7 +49,7 @@ namespace IntranetDiskmed.Intranet
         public bool EnviarEmail()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(AppDomain.CurrentDomain.BaseDirectory + "Settings.config");
+            xmlDoc.Load(AppDomain.CurrentDomain.BaseDirectory + Configuracoes.ArquivoConfig);
 
             try
             {

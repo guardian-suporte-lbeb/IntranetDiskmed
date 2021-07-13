@@ -10,12 +10,17 @@ namespace IntranetDiskmed.Intranet
 #if (DEBUG)
         public static String Add { get; set; } = "990";
 #else
-            public static String Add { get; set; } = "020";
+            public static String Add { get; set; } = "010";
 #endif
 
         /// <summary>
-        /// Cadastro de Cliente
+        /// DADOS DA TABELA DA ANVISA
         /// </summary>
-        public static String CC2 { get; set; } = "CC2" + Add;
+        public static String ZZA { get; set; } = "ZZA" + Add;
+
+        /// <summary>
+        /// DADOS DA TABELA DA ALTERACAO DE CUSTO DE PRODUTO
+        /// </summary>
+        public static String ZZP { get; set; } = "ZZP" + Add;
     }
 }

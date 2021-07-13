@@ -141,9 +141,9 @@ namespace IntranetDiskmed
                     mensagem += "\n\n";
                     mensagem += "Atenciosamente,";
                     mensagem += "\n\n";
-                    mensagem += "Intranet Térmica";
+                    mensagem += "Intranet DiskMed";
 
-                    Email email = new Email("Recuperação de Senha | Intranet Térmica", mensagem, txtEmail.Text.ToLower().Trim());
+                    Email email = new Email("Recuperação de Senha | Intranet DiskMed", mensagem, txtEmail.Text.ToLower().Trim());
 
                     if (email.EnviarEmail())
                     {

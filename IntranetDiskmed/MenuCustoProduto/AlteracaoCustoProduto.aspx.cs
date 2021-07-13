@@ -1,16 +1,20 @@
-﻿using IntranetDiskmed.Models;
+﻿using IntranetDiskmed.Intranet;
+using IntranetDiskmed.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace IntranetDiskmed
+namespace IntranetDiskmed.MenuCustoProduto
 {
-    public partial class index : System.Web.UI.Page
+    public partial class AlteracaoCustoProduto : System.Web.UI.Page
     {
+        private Usuario usuario;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,7 +31,8 @@ namespace IntranetDiskmed
                 Response.AppendHeader("Pragma", "no-cache");
             }
 
-            Usuario usuario = (Usuario)Session["USUARIO"];
+            usuario = (Usuario)Session["USUARIO"];
+            Interface.FecharModalMensagem(ModalMensagem, BackgroundModal);
 
             if (usuario == null)
             {
@@ -41,36 +46,6 @@ namespace IntranetDiskmed
 
                 Response.Redirect(FormsAuthentication.LoginUrl);
             }
-
-            TxtUsuario.Text = usuario.Nome;
-
-            bool acessoClientes = false;
-
-            List<bool> rotinasClientes = new List<bool>();
-            rotinasClientes.Add(usuario.Anvisa);
-            rotinasClientes.Add(usuario.Custo);
-            rotinasClientes.Add(usuario.Empenho);
-
-            foreach (bool rotina in rotinasClientes)
-            {
-                if (rotina)
-                {
-                    acessoClientes = true;
-                    break;
-                }
-            }
-
-            if (usuario.Tipo != "A")
-                menuAcessos.Visible = false;
-
-            if (usuario.Empenho == false)
-                menuEmpenho.Visible = false;
-
-            if (usuario.Custo == false)
-                menuCusto.Visible = false;
-
-            if (usuario.Anvisa == false)
-                menuAnvisa.Visible = false;
         }
 
         protected void btnSair_Click(object sender, EventArgs e)
@@ -89,6 +64,52 @@ namespace IntranetDiskmed
             Session.Abandon();
 
             Response.Redirect(FormsAuthentication.LoginUrl);
+        }
+
+        protected void GdvCustoProduto_Sorting(object sender, GridViewSortEventArgs e)
+        {
+            DataTable dtNotas = Session["GdvCustoProduto"] as DataTable;
+
+            if (dtNotas != null)
+            {
+                dtNotas.DefaultView.Sort = e.SortExpression + " " + OrdenarColuna(e);
+                GdvCustoProduto.DataSource = dtNotas;
+                GdvCustoProduto.DataBind();
+            }
+        }
+
+        private string OrdenarColuna(GridViewSortEventArgs e)
+        {
+            // Por padrão, defina a direção de classificação como ascendente.
+            string ordem = "ASC";
+
+            //Recupere a última coluna que foi classificada.
+            string sortExpression = ViewState["SortExpression"] as string;
+
+            if (sortExpression != null)
+            {
+                // Verifique se a mesma coluna está sendo classificada.
+                // Caso contrário, o valor padrão pode ser retornado.
+                if (sortExpression == e.SortExpression)
+                {
+                    string lastDirection = ViewState["SortDirection"] as string;
+                    if ((lastDirection != null) && (lastDirection == "ASC"))
+                    {
+                        ordem = "DESC";
+                    }
+                }
+            }
+
+            // Salve novos valores no ViewState.
+            ViewState["SortDirection"] = ordem;
+            ViewState["SortExpression"] = e.SortExpression;
+
+            return ordem;
+        }
+
+        protected void LbtnBuscarCustoProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,118 @@
+﻿
+/*#region ----------------------------------------------------------------------------- CORE MODAL ----------------------------------------------------------------------------- */
+
+.modal-guardian {
+    display: none;
+    position: fixed;
+    z-index: 410;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+.modal-aplicacao {
+    display: none;
+    position: fixed;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+}
+
+.modal-mensagem-background {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 400;
+}
+
+.conteudo-modal {
+    float: left;
+    width: 100%;
+    height: 80%;
+    overflow-y: overlay;
+    padding: 15px;
+}
+
+.cabecalho-modal {
+    float: left;
+    width: 100%;
+}
+
+.titulo-modal {
+    color: #3d7ea8;
+    font-weight: bold;
+}
+
+.rodape-modal {
+    float: left;
+    width: 100%;
+    text-align: left !important;
+}
+
+/*#endregion */
+
+/*#region ----------------------------------------------------------------------------- TIPOS MODAL ----------------------------------------------------------------------------- */
+
+.modal-background {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 400;
+}
+
+.modal-mensagem {
+    top: 30% !important;
+    right: 30% !important;
+    left: 30% !important;
+    z-index: 500;
+}
+
+.modal-confirmacao {
+    top: 30% !important;
+    right: 30% !important;
+    left: 30% !important;
+    z-index: 450;
+}
+
+.modal-conteudo {
+    float: left;
+    width: 100%;
+    height: 80%;
+    overflow-y: overlay;
+    padding: 15px;
+}
+
+.modal-filtros {
+    top: 20% !important;
+    right: 34% !important;
+    left: 34% !important;
+    z-index: 420;
+}
+
+/*#endregion */
+
+
+
+

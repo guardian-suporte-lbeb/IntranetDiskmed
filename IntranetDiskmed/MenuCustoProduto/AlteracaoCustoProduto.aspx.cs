@@ -1,4 +1,5 @@
-﻿using IntranetDiskmed.Intranet;
+﻿using IntranetDiskmed.DAO;
+using IntranetDiskmed.Intranet;
 using IntranetDiskmed.Models;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,12 @@ namespace IntranetDiskmed.MenuCustoProduto
                 Session.Abandon();
 
                 Response.Redirect(FormsAuthentication.LoginUrl);
+            }
+
+            if (!IsPostBack)
+            {
+                PreencherOrigem();
+                PreencherMarca();
             }
         }
 
@@ -107,9 +114,125 @@ namespace IntranetDiskmed.MenuCustoProduto
             return ordem;
         }
 
+        public void BuscarDados()
+        {
+            AlteracaoCProdutoDAO CProdutoDAO = new AlteracaoCProdutoDAO();
+
+            DataTable dtDados = new DataTable();
+
+            string filtroQuery = "";
+
+            // Filtro por Data De
+            if (!string.IsNullOrEmpty(TxtDataDe.Text.Replace("'", " ")))
+            {
+                try
+                {
+                    filtroQuery += " AND ZZP_DATA >= '" + Convert.ToDateTime(TxtDataDe.Text.Trim()).ToString("yyyy/MM/dd").Replace("/", "") + "' ";
+                }
+                catch (Exception)
+                {
+                    Interface.ExibirModalMensagem(Interface.Tipo.Problema, ModalMensagem, BackgroundModal, LblDescricaoModalMensagem);
+                    return;
+                }
+            }
+
+            // Filtro por Data Ate
+            if (!string.IsNullOrEmpty(TxtDataAte.Text.Replace("'", " ")))
+            {
+                try
+                {
+                    filtroQuery += " AND ZZP_DATA <= '" + Convert.ToDateTime(TxtDataAte.Text.Trim()).ToString("yyyy/MM/dd").Replace("/", "") + "' ";
+                }
+                catch (Exception)
+                {
+                    Interface.ExibirModalMensagem(Interface.Tipo.Problema, ModalMensagem, BackgroundModal, LblDescricaoModalMensagem);
+                    return;
+                }
+            }
+
+            // Filtro por Like
+            if (!String.IsNullOrWhiteSpace(TxtNomeUsuario.Text.Replace("'", " ")))
+            {
+                filtroQuery += " AND ZZP_NOMEUS LIKE '%" + TxtNomeUsuario.Text.Replace("'", " ").TrimStart().TrimEnd() + "%' ";
+            }
+
+            if (!String.IsNullOrWhiteSpace(TxtDescriProd.Text.Replace("'", " ")))
+            {
+                filtroQuery += " AND ZZP_DESCRI LIKE '%" + TxtDescriProd.Text.Replace("'", " ").TrimStart().TrimEnd() + "%' ";
+            }
+
+            // Filtro Lista
+            if (DdlMarca.SelectedValue != "Todos")
+            {
+                filtroQuery += " AND ZZP_MARCA LIKE '%" + DdlMarca.SelectedValue.TrimStart().TrimEnd() + "%' ";
+            }
+
+            if (DdlOrigem.SelectedValue != "Todos")
+            {
+                filtroQuery += " AND ZZP_ORIGEM LIKE '%" + DdlOrigem.SelectedValue.TrimStart().TrimEnd() + "%' ";
+            }
+
+            dtDados = CProdutoDAO.DadosAlteracaoCusto(filtroQuery);
+
+            if (dtDados.Rows.Count > 0)
+            {
+                GdvCustoProduto.DataSource = dtDados;
+                GdvCustoProduto.DataBind();
+                GdvCustoProduto.UseAccessibleHeader = true;
+                GdvCustoProduto.HeaderRow.TableSection = TableRowSection.TableHeader;
+            }
+            else
+            {
+                TituloGrid1.Visible = false;
+                Interface.ExibirModalMensagem(Interface.Tipo.Problema, ModalMensagem, BackgroundModal, LblDescricaoModalMensagem, "Nenhum dado encontrado!");
+                GdvCustoProduto.DataSource = null;
+                GdvCustoProduto.DataBind();
+            }
+        }
+
         protected void LbtnBuscarCustoProduto_Click(object sender, EventArgs e)
         {
+            BuscarDados();
+        }
 
+        public void PreencherOrigem()
+        {
+            List<AlteracaoCProduto> listAlteracaoCProduto = new AlteracaoCProdutoDAO().BuscarOrigemLista();
+
+            if (listAlteracaoCProduto.Count > 0)
+            {
+                DdlOrigem.Items.Clear();
+                DdlOrigem.Items.Add(new ListItem { Value = "Todos", Text = "Todos" });
+                foreach (AlteracaoCProduto alteracaoCProduto in listAlteracaoCProduto)
+                {
+                    ListItem listItemFiltro = new ListItem
+                    {
+                        Value = alteracaoCProduto.Origem,
+                        Text = alteracaoCProduto.Origem,
+                    };
+                    DdlOrigem.Items.Add(listItemFiltro);
+                }
+            }
+        }
+
+        public void PreencherMarca()
+        {
+            List<AlteracaoCProduto> listAlteracaoCProduto = new AlteracaoCProdutoDAO().BuscarMarcaLista();
+
+            if (listAlteracaoCProduto.Count > 0)
+            {
+                DdlMarca.Items.Clear();
+                DdlMarca.Items.Add(new ListItem { Value = "Todos", Text = "Todos" });
+                foreach (AlteracaoCProduto alteracaoCProduto in listAlteracaoCProduto)
+                {
+                    ListItem listItemFiltro = new ListItem
+                    {
+                        Value = alteracaoCProduto.Marca,
+                        Text = alteracaoCProduto.Marca,
+                    };
+                    DdlMarca.Items.Add(listItemFiltro);
+                }
+            }
         }
     }
 }

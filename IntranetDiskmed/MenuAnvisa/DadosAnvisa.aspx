@@ -33,8 +33,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
 
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
-
-
     <style>
         .tr, td {
             padding: 2px !important;

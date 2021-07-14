@@ -76,13 +76,31 @@ namespace IntranetDiskmed.MenuCustoProduto {
         protected global::System.Web.UI.WebControls.TextBox TxtDataDe;
         
         /// <summary>
-        /// Controle TxtDataAté.
+        /// Controle TxtDataDe_CalendarExtender.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDataAté;
+        protected global::AjaxControlToolkit.CalendarExtender TxtDataDe_CalendarExtender;
+        
+        /// <summary>
+        /// Controle TxtDataAte.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtDataAte;
+        
+        /// <summary>
+        /// Controle TxtDataAte_CalendarExtender.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender TxtDataAte_CalendarExtender;
         
         /// <summary>
         /// Controle TxtNomeUsuario.

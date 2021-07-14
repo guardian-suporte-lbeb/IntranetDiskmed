@@ -34,6 +34,32 @@
 
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
 
+    <style>
+        .tr, td {
+            padding: 2px !important;
+            padding-bottom: 4px !important;
+            padding-top: 3px !important;
+        }
+
+        .espacoTop {
+            margin-top: 7px !important;
+            background-color: #438217 !important;
+            text-align: center !important;
+            color: white !important;
+            padding-top: 1px !important;
+            font-size: 15px !important;
+            padding-bottom: 1px !important;
+            margin-bottom: 7px;
+            vertical-align: central !important;
+            /*font-weight: bold !important;*/
+        }
+
+        .textoBarra {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 10px !important;
+        }
+    </style>
 </head>
 <body>
     <form id="formAlteracaoCusto" runat="server">
@@ -85,27 +111,37 @@
                     <div style="display: flex; align-items: center;" class="row form-group">
                         <div class="col-md-2 col-sm-2">
                             <label>Data De:</label>
-                            <asp:TextBox ID="TxtDataDe" CssClass="form-control input-sm" runat="server" TextMode="Date"></asp:TextBox>
+                            <asp:TextBox ID="TxtDataDe" CssClass="form-control input-sm" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                            <asp:CalendarExtender ID="TxtDataDe_CalendarExtender" runat="server" Enabled="True"
+                                PopupButtonID="TxtDataDe" TargetControlID="TxtDataDe" TodaysDateFormat="d MMMM, yyyy"
+                                Format="dd/MM/yyyy" ClearTime="True"></asp:CalendarExtender>
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <label>Data Até:</label>
-                            <asp:TextBox ID="TxtDataAté" CssClass="form-control input-sm" runat="server" TextMode="Date"></asp:TextBox>
+                            <asp:TextBox ID="TxtDataAte" CssClass="form-control input-sm" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                            <asp:CalendarExtender ID="TxtDataAte_CalendarExtender" runat="server" Enabled="True"
+                                PopupButtonID="TxtDataAte" TargetControlID="TxtDataAte" TodaysDateFormat="d MMMM, yyyy"
+                                Format="dd/MM/yyyy" ClearTime="True"></asp:CalendarExtender>
                         </div>
-                         <div class="col-md-2 col-sm-2">
+                        <div class="col-md-2 col-sm-2">
                             <label>Nome Usuário:</label>
                             <asp:TextBox ID="TxtNomeUsuario" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                         </div>
-                         <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-6">
                             <label>Descrição do Produto:</label>
                             <asp:TextBox ID="TxtDescriProd" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <label>Origem:</label>
-                            <asp:DropDownList ID="DdlOrigem" CssClass="form-control" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="DdlOrigem" CssClass="form-control" runat="server">
+                                <asp:ListItem Text="Todos" Value="Todos"></asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <label>Marca:</label>
-                            <asp:DropDownList ID="DdlMarca" CssClass="form-control" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="DdlMarca" CssClass="form-control" runat="server">
+                                <asp:ListItem Text="Todos" Value="Todos"></asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                         <div style="margin-top: 2.5rem;" class="col-md-2 col-sm-2">
                             <asp:LinkButton ID="LbtnBuscarCustoProduto" CssClass="btn btn-sm btn-primary" OnClick="LbtnBuscarCustoProduto_Click" Style="float: right;" runat="server">
@@ -119,23 +155,7 @@
                     </asp:Panel>
                     <div style="width: 100%; overflow-x: auto; height: 41rem;">
                         <asp:GridView ID="GdvCustoProduto" runat="server" PageSize="15" class="table" SelectedRowStyle-BorderStyle="Solid"
-                            AlternatingRowStyle-BorderWidth="1px" Font-Size="small" CellPadding="15" AutoGenerateColumns="False" AllowSorting="true" OnSorting="GdvCustoProduto_Sorting">
-                            <Columns>
-                                <asp:BoundField DataField="Filial" HeaderText="Filial" SortExpression="Filial" />
-                                <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
-                                <asp:BoundField DataField="Hora" HeaderText="Hora" SortExpression="Hora" />
-                                <asp:BoundField DataField="User" HeaderText="User" SortExpression="User" />
-                                <asp:BoundField DataField="NomeUser" HeaderText="NomeUser" SortExpression="NomeUser" />
-                                <asp:BoundField DataField="Origem" HeaderText="Origem" SortExpression="Origem" />
-                                <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" />
-                                <asp:BoundField DataField="Desc" HeaderText="Desc" SortExpression="Desc" />
-                                <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca" />
-                                <asp:BoundField DataField="OldUpc" HeaderText="OldUpc" SortExpression="OldUpc" />
-                                <asp:BoundField DataField="OldStd" HeaderText="OldStd" SortExpression="OldStd" />
-                                <asp:BoundField DataField="NewUpc" HeaderText="NewUpc" SortExpression="NewUpc" />
-                                <asp:BoundField DataField="NewStd" HeaderText="NewStd" SortExpression="NewStd" />
-                                <asp:BoundField DataField="Config" HeaderText="Config" SortExpression="Config" />
-                            </Columns>
+                            AlternatingRowStyle-BorderWidth="1px" Font-Size="small" CellPadding="15" AutoGenerateColumns="True" AllowSorting="true" OnSorting="GdvCustoProduto_Sorting">
                             <HeaderStyle CssClass="table-header" Wrap="true" BackColor="#438217" ForeColor="White" Font-Size="11px" />
                             <RowStyle CssClass="table-item" Wrap="False" Font-Size="11px" />
                             <SortedAscendingCellStyle BackColor="#F1F1F1" />
@@ -173,7 +193,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-12 text-center">
                                 <br />
-                                <a id="BtnFecharModalMensagem" onclick="FecharModalMensagem()" class="btn btn-success">
+                                <a id="BtnFecharModalMensagem" onclick="FecharModalMensagemPortal()" class="btn btn-success">
                                     <i class="fas fa-check"></i>OK
                                 </a>
                             </div>

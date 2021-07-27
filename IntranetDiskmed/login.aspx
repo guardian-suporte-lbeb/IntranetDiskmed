@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login</title>
+    <title>Intranet Diskmed</title>
 
     <script type="text/javascript">
         window.onload = function () {

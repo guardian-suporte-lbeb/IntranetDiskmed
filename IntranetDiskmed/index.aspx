@@ -69,7 +69,7 @@
 
                             <div id="menuEmpenho" runat="server" class="col-md-5 col-sm-5">
                                 <div class="feature-wrap">
-                                    <a href="MenuComercial/menu-comercial.aspx">
+                                    <a href="index.aspx">
                                         <i class="fas fa-people-carry"></i>
                                         <h2>Empenho</h2>
                                     </a>

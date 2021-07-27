@@ -114,14 +114,14 @@ namespace IntranetDiskmed.MenuAnvisa
 
             if (!String.IsNullOrWhiteSpace(TxtTextoLike.Text.Trim()))
             {
-                filtroQuery += " AND ( UPPER(RTRIM(LTRIM((ZZA_SUBS1))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_SUBS2))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_LABORA))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_PRODUT))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_CLASSE))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_REGIME))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_LISTPC))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
-                    "OR UPPER(RTRIM(LTRIM((ZZA_TARJA))) LIKE UPPER(RTRIM(LTRIM(('%" + TxtTextoLike.Text + "%'))) " +
+                filtroQuery += " AND ( UPPER(RTRIM(LTRIM(ZZA_SUBS1))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_SUBS2))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_LABORA))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_PRODUT))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_CLASSE))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_REGIME))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_LISTPC))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
+                    "OR UPPER(RTRIM(LTRIM(ZZA_TARJA))) LIKE UPPER(RTRIM(LTRIM('%" + TxtTextoLike.Text + "%'))) " +
                     " ) ";
             }
 

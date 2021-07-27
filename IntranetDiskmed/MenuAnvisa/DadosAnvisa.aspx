@@ -40,6 +40,11 @@
             padding-top: 3px !important;
         }
 
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+
         .espacoTop {
             margin-top: 7px !important;
             background-color: #438217 !important;
@@ -131,49 +136,49 @@
                         <asp:GridView ID="GdvAnvisa" runat="server" PageSize="15" class="table" SelectedRowStyle-BorderStyle="Solid"
                             AlternatingRowStyle-BorderWidth="1px" Font-Size="small" CellPadding="15" AutoGenerateColumns="False" AllowSorting="true" OnSorting="GdvAnvisa_Sorting">
                             <Columns>
-                                <asp:BoundField DataField="Filial" HeaderText="Filial" SortExpression="Filial" />
-                                <asp:BoundField DataField="Substancia" HeaderText="SUBSTÂNCIA" SortExpression="Substancia" />
-                                <asp:BoundField DataField="Substancia2" HeaderText="SUBSTÂNCIA LINHA 2" SortExpression="Substancia2" />
-                                <asp:BoundField DataField="CNPJ" HeaderText="CNPJ" SortExpression="CNPJ" />
-                                <asp:BoundField DataField="Laboratorio" HeaderText="LABORATÓRIO" SortExpression="Laboratorio" />
-                                <asp:BoundField DataField="CodGgrem" HeaderText="CÓDIGO GGREM" SortExpression="CodGgrem" />
-                                <asp:BoundField DataField="Registro" HeaderText="REGISTRO" SortExpression="Registro" />
-                                <asp:BoundField DataField="Ean1" HeaderText="EAN 1" SortExpression="Ean1" />
-                                <asp:BoundField DataField="Ean2" HeaderText="EAN 2" SortExpression="Ean2" />
-                                <asp:BoundField DataField="Ean3" HeaderText="EAN 3" SortExpression="Ean3" />
-                                <asp:BoundField DataField="Produto" HeaderText="PRODUTO" SortExpression="Produto" />
-                                <asp:BoundField DataField="Apresentacao" HeaderText="APRESENTAÇÃO" SortExpression="Apresentacao" />
-                                <asp:BoundField DataField="ClasseTerapeutica" HeaderText="CLASSE TERAPÊUTICA" SortExpression="ClasseTerapeutica" />
-                                <asp:BoundField DataField="TipoProduto" HeaderText="TIPO DE PRODUTO (STATUS DO PRODUTO)" SortExpression="TipoProduto" />
-                                <asp:BoundField DataField="RegimePreco" HeaderText="REGIME DE PRECO" SortExpression="RegimePreco" />
-                                <asp:BoundField DataField="PFSemImpostos" HeaderText="PF SEM IMPOSTOS" SortExpression="PFSemImpostos" />
-                                <asp:BoundField DataField="PF0" HeaderText="PF 0%" SortExpression="PF0" />
-                                <asp:BoundField DataField="PF12" HeaderText="PF 12%" SortExpression="PF12" />
-                                <asp:BoundField DataField="PF17" HeaderText="PF 17%" SortExpression="PF17" />
-                                <asp:BoundField DataField="PF17AL" HeaderText="PF 17% ALC" SortExpression="PF17AL" />
-                                <asp:BoundField DataField="PF175" HeaderText="PF 17,5%" SortExpression="PF175" />
-                                <asp:BoundField DataField="PF175AL" HeaderText="PF 17,5% ALC" SortExpression="PF175AL" />
-                                <asp:BoundField DataField="PF18" HeaderText="PF 18%" SortExpression="PF18" />
-                                <asp:BoundField DataField="PF18AL" HeaderText="PF 18% ALC" SortExpression="PF18AL" />
-                                <asp:BoundField DataField="PF20" HeaderText="PF 20%" SortExpression="PF20" />
-                                <asp:BoundField DataField="PMC0" HeaderText="PMC 0%" SortExpression="PMC0" />
-                                <asp:BoundField DataField="PMC12" HeaderText="PMC 12%" SortExpression="PMC12" />
-                                <asp:BoundField DataField="PMC17" HeaderText="PMC 17%" SortExpression="PMC17" />
-                                <asp:BoundField DataField="PMC17AL" HeaderText="PMC 17% ALC" SortExpression="PMC17AL" />
-                                <asp:BoundField DataField="PMC175" HeaderText="PMC 17,5%" SortExpression="PMC175" />
-                                <asp:BoundField DataField="PMC175AL" HeaderText="PMC 17,5% ALC" SortExpression="PMC175AL" />
-                                <asp:BoundField DataField="PMC18" HeaderText="PMC 18%" SortExpression="PMC18" />
-                                <asp:BoundField DataField="PMC18AL" HeaderText="PMC 18% ALC" SortExpression="PMC18AL" />
-                                <asp:BoundField DataField="PMC20" HeaderText="PMC 20%" SortExpression="PMC20" />
-                                <asp:BoundField DataField="RestHosp" HeaderText="RESTRIÇÃO HOSPITALAR" SortExpression="RestHosp" />
-                                <asp:BoundField DataField="Cap" HeaderText="CAP" SortExpression="Cap" />
-                                <asp:BoundField DataField="Confaz87" HeaderText="CONFAZ 87" SortExpression="Confaz87" />
-                                <asp:BoundField DataField="ICMS0" HeaderText="ICMS 0%" SortExpression="ICMS0" />
-                                <asp:BoundField DataField="AnaliseRec" HeaderText="ANÁLISE RECURSAL" SortExpression="AnaliseRec" />
-                                <asp:BoundField DataField="Listpc" HeaderText="LISTA DE CONCESSÃO DE CRÉDITO TRIBUTÁRIO (PIS/COFINS)" SortExpression="Listpc" />
-                                <asp:BoundField DataField="Comerc19" HeaderText="COMERCIALIZAÇÃO 2019" SortExpression="Comerc19" />
-                                <asp:BoundField DataField="Tarja" HeaderText="TARJA" SortExpression="Tarja" />
-                                <asp:BoundField DataField="Idproc" HeaderText="ID. PROCESSAMENTO" SortExpression="Idproc" />
+                                <asp:BoundField DataField="Filial" HeaderText="Filial ↓↑" SortExpression="Filial" />
+                                <asp:BoundField DataField="Substancia" HeaderText="SUBSTÂNCIA ↓↑" SortExpression="Substancia" />
+                                <asp:BoundField DataField="Substancia2" HeaderText="SUBSTÂNCIA LINHA 2 ↓↑" SortExpression="Substancia2" />
+                                <asp:BoundField DataField="CNPJ" HeaderText="CNPJ ↓↑" SortExpression="CNPJ" />
+                                <asp:BoundField DataField="Laboratorio" HeaderText="LABORATÓRIO ↓↑" SortExpression="Laboratorio" />
+                                <asp:BoundField DataField="CodGgrem" HeaderText="CÓDIGO GGREM ↓↑" SortExpression="CodGgrem" />
+                                <asp:BoundField DataField="Registro" HeaderText="REGISTRO ↓↑" SortExpression="Registro" />
+                                <asp:BoundField DataField="Ean1" HeaderText="EAN 1 ↓↑" SortExpression="Ean1" />
+                                <asp:BoundField DataField="Ean2" HeaderText="EAN 2 ↓↑" SortExpression="Ean2" />
+                                <asp:BoundField DataField="Ean3" HeaderText="EAN 3 ↓↑" SortExpression="Ean3" />
+                                <asp:BoundField DataField="Produto" HeaderText="PRODUTO ↓↑" SortExpression="Produto" />
+                                <asp:BoundField DataField="Apresentacao" HeaderText="APRESENTAÇÃO ↓↑" SortExpression="Apresentacao" />
+                                <asp:BoundField DataField="ClasseTerapeutica" HeaderText="CLASSE TERAPÊUTICA ↓↑" SortExpression="ClasseTerapeutica" />
+                                <asp:BoundField DataField="TipoProduto" HeaderText="TIPO DE PRODUTO (STATUS DO PRODUTO) ↓↑" SortExpression="TipoProduto" />
+                                <asp:BoundField DataField="RegimePreco" HeaderText="REGIME DE PRECO ↓↑" SortExpression="RegimePreco" />
+                                <asp:BoundField DataField="PFSemImpostos" HeaderText="PF SEM IMPOSTOS ↓↑" SortExpression="PFSemImpostos" />
+                                <asp:BoundField DataField="PF0" HeaderText="PF 0% ↓↑" SortExpression="PF0" />
+                                <asp:BoundField DataField="PF12" HeaderText="PF 12% ↓↑" SortExpression="PF12" />
+                                <asp:BoundField DataField="PF17" HeaderText="PF 17% ↓↑" SortExpression="PF17" />
+                                <asp:BoundField DataField="PF17AL" HeaderText="PF 17% ALC ↓↑" SortExpression="PF17AL" />
+                                <asp:BoundField DataField="PF175" HeaderText="PF 17,5% ↓↑" SortExpression="PF175" />
+                                <asp:BoundField DataField="PF175AL" HeaderText="PF 17,5% ALC ↓↑" SortExpression="PF175AL" />
+                                <asp:BoundField DataField="PF18" HeaderText="PF 18% ↓↑" SortExpression="PF18" />
+                                <asp:BoundField DataField="PF18AL" HeaderText="PF 18% ALC ↓↑" SortExpression="PF18AL" />
+                                <asp:BoundField DataField="PF20" HeaderText="PF 20% ↓↑" SortExpression="PF20" />
+                                <asp:BoundField DataField="PMC0" HeaderText="PMC 0% ↓↑" SortExpression="PMC0" />
+                                <asp:BoundField DataField="PMC12" HeaderText="PMC 12% ↓↑" SortExpression="PMC12" />
+                                <asp:BoundField DataField="PMC17" HeaderText="PMC 17% ↓↑" SortExpression="PMC17" />
+                                <asp:BoundField DataField="PMC17AL" HeaderText="PMC 17% ALC ↓↑" SortExpression="PMC17AL" />
+                                <asp:BoundField DataField="PMC175" HeaderText="PMC 17,5% ↓↑" SortExpression="PMC175" />
+                                <asp:BoundField DataField="PMC175AL" HeaderText="PMC 17,5% ALC ↓↑" SortExpression="PMC175AL" />
+                                <asp:BoundField DataField="PMC18" HeaderText="PMC 18% ↓↑" SortExpression="PMC18" />
+                                <asp:BoundField DataField="PMC18AL" HeaderText="PMC 18% ALC ↓↑" SortExpression="PMC18AL" />
+                                <asp:BoundField DataField="PMC20" HeaderText="PMC 20% ↓↑" SortExpression="PMC20" />
+                                <asp:BoundField DataField="RestHosp" HeaderText="RESTRIÇÃO HOSPITALAR ↓↑" SortExpression="RestHosp" />
+                                <asp:BoundField DataField="Cap" HeaderText="CAP ↓↑" SortExpression="Cap" />
+                                <asp:BoundField DataField="Confaz87" HeaderText="CONFAZ 87 ↓↑" SortExpression="Confaz87" />
+                                <asp:BoundField DataField="ICMS0" HeaderText="ICMS 0% ↓↑" SortExpression="ICMS0" />
+                                <asp:BoundField DataField="AnaliseRec" HeaderText="ANÁLISE RECURSAL ↓↑" SortExpression="AnaliseRec" />
+                                <asp:BoundField DataField="Listpc" HeaderText="LISTA DE CONCESSÃO DE CRÉDITO TRIBUTÁRIO (PIS/COFINS) ↓↑" SortExpression="Listpc" />
+                                <asp:BoundField DataField="Comerc19" HeaderText="COMERCIALIZAÇÃO 2019 ↓↑" SortExpression="Comerc19" />
+                                <asp:BoundField DataField="Tarja" HeaderText="TARJA ↓↑" SortExpression="Tarja" />
+                                <asp:BoundField DataField="Idproc" HeaderText="ID. PROCESSAMENTO ↓↑" SortExpression="Idproc" />
                             </Columns>
                             <HeaderStyle CssClass="table-header" Wrap="true" BackColor="#438217" ForeColor="White" Font-Size="11px" />
                             <RowStyle CssClass="table-item" Wrap="False" Font-Size="11px" />
